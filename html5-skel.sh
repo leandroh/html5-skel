@@ -1,6 +1,7 @@
 #!/usr/bin/env /bin/sh
 
-TEMPLATES_DIR="./templates"
+BASE_DIR=$(dirname $(realpath $0))
+TEMPLATES_DIR="$BASE_DIR/templates"
 TEMPLATE=$1
 TITLE=$2
 
