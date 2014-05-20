@@ -3,7 +3,6 @@
 BASE_DIR=$(dirname $(realpath $0))
 TEMPLATES_DIR="$BASE_DIR/templates"
 TEMPLATE=$1
-TITLE=$2
 
 die() { echo "$*"; exit 1; } 1>&2
 
