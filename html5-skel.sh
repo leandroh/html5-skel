@@ -1,6 +1,6 @@
 #!/usr/bin/env /bin/sh
 
-BASE_DIR=$(dirname $(realpath $0))
+BASE_DIR=$( cd $(dirname $(readlink $0)) ; pwd -P )
 TEMPLATES_DIR="$BASE_DIR/templates"
 TEMPLATE=$1
 
@@ -24,4 +24,4 @@ if [ -z "$TITLE" ]; then
     TITLE="html 5 minimal skeleton"
 fi
 
-sed 's/${TITLE}/'"$TITLE"'/g' $TEMPLATE_FILE > "$TEMPLATE.html"
+sudo sed 's/${TITLE}/'"$TITLE"'/g' $TEMPLATE_FILE > "$TEMPLATE.html"
