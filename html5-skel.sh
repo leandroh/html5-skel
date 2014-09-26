@@ -24,4 +24,4 @@ if [ -z "$TITLE" ]; then
     TITLE="html 5 minimal skeleton"
 fi
 
-sudo sed 's/${TITLE}/'"$TITLE"'/g' $TEMPLATE_FILE > "$TEMPLATE.html"
+sed 's/${TITLE}/'"$TITLE"'/g' $TEMPLATE_FILE > "$TEMPLATE.html"
